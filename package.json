@@ -7,10 +7,16 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "lucide-react": "^0.468.0",
+    "npm": "^10.9.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^0.2.4"
+    "react-slick": "^0.30.2",
+    "ryuu.js": "^4.7.0",
+    "slick-carousel": "^1.8.1",
+    "web-vitals": "^0.2.4",
+    "yarn": "^1.22.22"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.16"
   }
 }

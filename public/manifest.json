@@ -1,9 +1,17 @@
 {
-    "name": "React DomoApp",
+    "name": "Avigna Occupancy",
     "version": "0.0.1",
     "size": {
         "width": 3,
         "height": 3
     },
-    "mapping": []
+    "mapping": [
+        {
+            "dataSetId": "87a4f802-53fc-4906-90e7-4950259ea700",
+            "alias": "occupancy_status_data",
+            "fields":[]
+        }
+    ],
+    "id": "275097e8-d10d-45ea-be01-b7204e2401d5",
+    "proxyId":"87854a48-08f5-4ad3-a88c-d6ddf741bf93"
 }
