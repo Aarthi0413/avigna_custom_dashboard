@@ -44,27 +44,16 @@ const Slider = () => {
     );
   };
 
-  // const handleClick = (url) => {
-  //   const link = document.createElement('a');
-  //   link.href = url;
-  //   link.target = '_self';
-    
-  //   // Simulate the Ctrl key press by dispatching a click event with the ctrlKey set to true
-  //   const event = new MouseEvent('click', {
-  //     bubbles: true,
-  //     cancelable: true,
-  //     ctrlKey: true
-  //   });
-    
-  //   link.dispatchEvent(event);
-  // };
-
    const handleClick = (url) => {
     domo.navigate(url, false)
   };
 
-  return (
-    <div className="w-full h-[250px] flex items-center justify-center overflow-hidden p-5 relative">
+  return (    
+    <div className="flex flex-col justify-start">
+      <h1 className="text-md font-semibold text-[#013968] mt-8">
+        Click on 'View Analysis' to Explore Detailed Information
+      </h1>
+    <div className="w-full h-[250px] flex items-center justify-center overflow-hidden p-3 relative">
        <div className="absolute w-full flex items-center justify-center">
          {sliderData.map((slide, index) => {
            const isActive = index === currentIndex;
@@ -131,6 +120,7 @@ const Slider = () => {
        >
          <ChevronRight size={32} />
        </button>
+     </div>
      </div>
    ); 
 };

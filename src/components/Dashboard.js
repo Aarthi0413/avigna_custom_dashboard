@@ -89,11 +89,11 @@ const Dashboard = () => {
 
     const getUtilizationColor = (utilization) => {
         if (utilization < 35) {
-            return 'text-red-600';
+            return 'text-red-700';
         } else if (utilization >= 35 && utilization <= 75) {
-            return 'text-yellow-600';
+            return 'text-yellow-700';
         } else {
-            return 'text-green-600'; 
+            return 'text-green-700'; 
         }
     };
 
@@ -126,13 +126,13 @@ const Dashboard = () => {
                 <div className=" flex flex-col justify-center gap-3">
                     <div className='flex justify-between'>
                     <div>
-                        <h4 className='text-md text-[#013968] font-semibold'>Warehouse Utilized Rate</h4>
+                        <h4 className='text-md text-[#013968] font-semibold'>Warehouse Current Occupancy Rate</h4>
                     </div>
                     <div>
                         <select 
                             value={selectedWarehouse} 
                             onChange={handleWarehouseChange}
-                            className="border rounded px-2 py-1"
+                            className="border border-gray-400 rounded px-2 py-1"
                         >
                             {Object.keys(warehouses).map((warehouseName) => (
                                 <option key={warehouseName} value={warehouseName}>
@@ -163,7 +163,7 @@ const Dashboard = () => {
                                             const utilizationColor = getUtilizationColor(totalUtilizedValue);
 
                                             return (
-                                                <td key={rack}  className={`p-2 border border-gray-400 text-center ${utilizationColor}`}
+                                                <td key={rack}  className={`p-2 font-semibold border border-gray-400 text-center ${utilizationColor}`}
                                                 onClick={() => handleCellClick(laneName, rack)}>
                                                     {Math.round(totalUtilizedValue)}%
                                                     
