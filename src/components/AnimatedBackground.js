@@ -2,11 +2,11 @@ import React from 'react';
 
 const AnimatedBackground = () => {
   const colorPalette = [
-    'bg-[#013968]/20',   // Deep blue
-    'bg-[#fb8d34]/20',   // Avigna orange
-    'bg-[#4a90e2]/20',   // Bright blue
-    'bg-[#2c3e50]/20',   // Dark slate
-    'bg-[#34495e]/20'    // Slightly lighter slate
+    'bg-[#013968]/20',
+    'bg-[#fb8d34]/20',
+    'bg-[#4a90e2]/20',
+    'bg-[#2c3e50]/20',
+    'bg-[#34495e]/20'
   ];
 
   return (

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import domo from 'ryuu.js';
 
 const sliderData = [
   {
@@ -19,7 +20,7 @@ const sliderData = [
     buttonUrl: "https://gwcteq-partner.domo.com/app-studio/2141068563/pages/41773543"
   },
   {
-    title: "Marketing Analysis",
+    title: "Enquiry and Sales Pipeline Analysis",
     buttonUrl: "https://gwcteq-partner.domo.com/app-studio/2141068563/pages/1033151934"
   },
   {
@@ -41,6 +42,25 @@ const Slider = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? sliderData.length - 1 : prevIndex - 1
     );
+  };
+
+  // const handleClick = (url) => {
+  //   const link = document.createElement('a');
+  //   link.href = url;
+  //   link.target = '_self';
+    
+  //   // Simulate the Ctrl key press by dispatching a click event with the ctrlKey set to true
+  //   const event = new MouseEvent('click', {
+  //     bubbles: true,
+  //     cancelable: true,
+  //     ctrlKey: true
+  //   });
+    
+  //   link.dispatchEvent(event);
+  // };
+
+   const handleClick = (url) => {
+    domo.navigate(url, false)
   };
 
   return (
@@ -86,14 +106,12 @@ const Slider = () => {
                  <h2 className="text-sm text-white font-bold text-center mb-4">
                    {slide.title}
                  </h2>
-                 <a
-                    href={slide.buttonUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                   className="w-[150px] bg-[#fb8d34] text-white p-2 rounded-lg hover:bg-[#c77029] transition-colors text-center text-sm block"
+                 <button
+                   onClick={() => handleClick(slide.buttonUrl)}
+                   className="w-[150px] bg-[#fb8d34] text-white p-2 rounded-lg hover:bg-[#c77029] transition-colors text-center text-sm"
                  >
                    View Analysis
-                 </a>
+                 </button>
                </div>
              </div>
            );
@@ -103,13 +121,13 @@ const Slider = () => {
        {/* Navigation Buttons */}
        <button
           onClick={prevSlide}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-transparent transition-colors z-20"
+          className="absolute left-[10%] top-1/2 -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-transparent transition-colors z-20"
        >
          <ChevronLeft size={32} />
        </button>
        <button
           onClick={nextSlide}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-transparent transition-colors z-20"
+          className="absolute right-[10%] top-1/2 -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-transparent transition-colors z-20"
        >
          <ChevronRight size={32} />
        </button>

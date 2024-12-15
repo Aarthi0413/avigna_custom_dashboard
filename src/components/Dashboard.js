@@ -107,7 +107,7 @@ const Dashboard = () => {
                 </div>
             </nav>
             <div className='text-center font-serif'>
-                <h4 className='italic font-semibold text-lg text-[#013968]'>Building the Manufacturing & Logistics Rails for the Modern Bharat</h4>
+                <h4 className='italic font-semibold text-lg text-[#013968]'>Deep Insights, Deeply Trusted - Avigna</h4>
             </div>
 
             <div className='flex mt-6 gap-4'>
@@ -148,22 +148,22 @@ const Dashboard = () => {
                         <table className="table-auto border-collapse w-full text-sm table-fixed">
                             <thead>
                                 <tr>
-                                    <th className="p-2 border text-center">Lane</th>
+                                    <th className="p-2 border border-gray-400 text-center">Lane</th>
                                     {racks.map((rack, index) => (
-                                        <th key={index} className="p-2 border text-center">{rack}</th>
+                                        <th key={index} className="p-2 border border-gray-400 text-center">{rack}</th>
                                     ))}
                                 </tr>
                             </thead>
                             <tbody>
                                 {Object.keys(lanes).map((laneName) => (
                                     <tr key={laneName}>
-                                        <td className="p-2 border text-center">{laneName}</td>
+                                        <td className="p-2 border border-gray-400 text-center">{laneName}</td>
                                         {racks.map((rack) => {
                                             const totalUtilizedValue = calculateUtilizationPercentage(lanes[laneName], rack);
                                             const utilizationColor = getUtilizationColor(totalUtilizedValue);
 
                                             return (
-                                                <td key={rack}  className={`p-2 border text-center ${utilizationColor}`}
+                                                <td key={rack}  className={`p-2 border border-gray-400 text-center ${utilizationColor}`}
                                                 onClick={() => handleCellClick(laneName, rack)}>
                                                     {Math.round(totalUtilizedValue)}%
                                                     
